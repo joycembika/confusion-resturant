@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<!--  Navigation Bar -->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -39,8 +40,9 @@
             </div>
         </div>
     </nav>
+<!--  Navigation Bar Ends-->
 
-    <!-- Login Modal -->
+<!-- Login Modal -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -78,9 +80,9 @@
             </div>
         </div>
     </div>
-    <!-- Login Modal Ends -->
+<!-- Login Modal Ends -->
 
-    <!-- Reservation Modal -->
+<!-- Reservation Modal -->
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -169,8 +171,10 @@
             </div>
         </div>
     </header>
+<!-- Header Ends -->
 
     <div class="container"> 
+    <!-- Carousel -->
         <div class="row row-content">
             <div class="col">
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -209,9 +213,20 @@
                     <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>      
+        </div> 
+    <!-- Carousel Ends -->
+
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -258,6 +273,7 @@
         </div>
     </div>
 
+<!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -299,9 +315,26 @@
            </div>
         </div>
     </footer>
+<!-- FOOTER ENDS -->
+
+<!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#mycarousel').carousel({ interval: 1000});
+            $('#carousel-pause').click(function() {
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function() {
+                $('#mycarousel').carousel('cycle');
+            });
+
+        })
+    </script>
+<!-- SCRIPTS END-->
 
 </body>
 

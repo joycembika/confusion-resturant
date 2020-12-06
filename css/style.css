@@ -49,6 +49,15 @@ body {
     min-height: 300px;
 }
 
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
+
+
 /* company address */
 .address {
     font-size: 80%;
