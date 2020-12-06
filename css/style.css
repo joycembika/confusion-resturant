@@ -25,12 +25,22 @@ body {
     background-color: #9575cd;
     color: floralwhite;
 }
+/* corporate leadership tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
 
+/* company address */
 .address {
     font-size: 80%;
     margin: 0;
     color: #0f0f0f;
 }
+
+/* footer */
 
 .footer {
     background-color: #d1c4e9;
