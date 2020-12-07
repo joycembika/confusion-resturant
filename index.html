@@ -13,7 +13,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -33,7 +33,7 @@
                     <li class="nav-item"><a href="/contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal"  data-target="#loginModal">
+                    <a id="login" href="#loginModal">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="form-row">
                             <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                            <button type="button" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
                 </div>
@@ -144,8 +144,8 @@
                             </div>
                         </div>
                         <div class="form-group offset-md-2">
-                            <button class="btn btn-secondary">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Reserve</button>  
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Reserve</button>  
                         </div>
                     </form>
                 </div>
@@ -166,7 +166,7 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button"  class="btn btn-block nav-link btn-warning" data-html="true" data-placement="bottom" data-toggle="modal"  data-target="#reserveModal">Reserve Table</a>
+                    <a role="button" id="reserve"  class="btn btn-block nav-link btn-warning" href="#reserveModal">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -335,7 +335,18 @@
                 }
             });
         });
+
+        // display Login Modal
+        $('#login').click(function () {
+            $('#loginModal').modal('toggle')
+        });
+
+        $('#reserve').click(function () {
+            $('#reserveModal').modal('toggle')
+        })
+       
     </script>
+   
 <!-- SCRIPTS END-->
 
 </body>
